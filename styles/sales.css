@@ -8,7 +8,7 @@ body {
 
 .container {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
 }
 
 /* Main Content */
@@ -29,60 +29,6 @@ p {
     color: #7f8c8d;
 }
 
-/* Dashboard Cards */
-.dashboard-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.card {
-    width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-icon {
-    font-size: 40px;
-    color: #3498db;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.card p {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.card small {
-    color: #95a5a6;
-    font-size: 14px;
-}
-
-.logo img {
-    height: 50px;
-    margin-right: 20px; 
-}
-
-.card:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover .card-icon {
-    color: #2980b9;
-}
-
 /* Table Styles */
 table {
     width: 100%;
@@ -95,7 +41,7 @@ table {
 }
 
 thead {
-    background-color: #3498db;
+    background-color: #5dade2; /* Light Blue for Sales */
     color: white;
 }
 
@@ -106,35 +52,35 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f2f8fd;
 }
 
 tbody tr:hover {
-    background-color: #e1f5fe;
+    background-color: #e4f1fb;
 }
 
 td {
     color: #2c3e50;
 }
 
-/* Add New Supplier Button */
+/* Add New Sale Button */
 .table-header {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-#addSupplierBtn {
+#addSalesBtn {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #5dade2;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#addSupplierBtn:hover {
-    background-color: #2980b9;
+#addSalesBtn:hover {
+    background-color: #3498db;
 }
 
 /* Pagination Controls */
@@ -147,7 +93,7 @@ td {
 
 #prevPage, #nextPage {
     padding: 10px;
-    background-color: #3498db;
+    background-color: #5dade2;
     color: white;
     border: none;
     border-radius: 5px;
@@ -155,7 +101,7 @@ td {
 }
 
 #prevPage:hover, #nextPage:hover {
-    background-color: #2980b9;
+    background-color: #3498db;
 }
 
 #currentPage {
@@ -164,8 +110,8 @@ td {
 }
 
 /* Add some spacing and styling to the action buttons */
-#supplierTable .editBtn, 
-#supplierTable .deleteBtn {
+#salesTable .editBtn, 
+#salesTable .deleteBtn {
     background: none;
     border: none;
     color: #007bff;
@@ -175,20 +121,20 @@ td {
     margin-right: 5px;
 }
 
-#supplierTable .editBtn:hover, 
-#supplierTable .deleteBtn:hover {
+#salesTable .editBtn:hover, 
+#salesTable .deleteBtn:hover {
     text-decoration: underline;
 }
 
-#supplierTable .deleteBtn {
+#salesTable .deleteBtn {
     color: #dc3545;
 }
 
-#supplierTable .deleteBtn:hover {
+#salesTable .deleteBtn:hover {
     color: #c82333;
 }
 
-/* Modal for Adding Supplier */
+/* Modal for Adding Sale */
 .modal {
     display: none;
     position: fixed;
@@ -210,8 +156,8 @@ td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Supplier Form */
-.add-supplier-form h2 {
+/* Sales Form */
+.add-sales-form h2 {
     font-size: 24px;
     color: #2c3e50;
     margin-bottom: 20px;
@@ -241,7 +187,7 @@ td {
 
 .form-group button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #5dade2;
     color: white;
     border: none;
     border-radius: 5px;
@@ -251,7 +197,7 @@ td {
 }
 
 .form-group button:hover {
-    background-color: #2980b9;
+    background-color: #3498db;
 }
 
 /* Close button for modal */
@@ -279,7 +225,16 @@ td {
         padding: 15px;
     }
 
-    .add-supplier-form h2 {
+    .add-sales-form h2 {
         font-size: 20px;
     }
 }
+
+/* Logo Styling */
+.logo img {
+    height: 60px;
+    max-width: 100%; /* Ensures the logo maintains its aspect ratio */
+    object-fit: contain; /* Makes sure the logo scales properly */
+    display: block;
+    margin: 0 auto;
+}  

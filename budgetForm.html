@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shipment Management</title>
+  <title>Budget Management</title>
   <link rel="stylesheet" href="styles/sidebar.css">
   <link rel="stylesheet" href="styles/topbar.css">
-  <link rel="stylesheet" href="styles/shipment.css">
+  <link rel="stylesheet" href="styles/budget.css">
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -53,32 +53,37 @@
         </div>
       </header>
 
-      <h1>Add New Shipment</h1>
+      <h1>Add New Budget</h1>
 
-      <!-- Add Shipment Form -->
-      <form class="add-shipment-form" id="addShipmentForm">
+      <!-- Add Budget Form -->
+      <form class="add-budget-form" id="addBudgetForm">
         <div class="form-group">
-          <label for="shipmentId">Shipment ID</label>
-          <input type="text" id="shipmentId" name="shipmentId" required>
+          <label for="budgetId">Budget ID</label>
+          <input type="text" id="budgetId" name="budgetId" required>
         </div>
 
         <div class="form-group">
-          <label for="destination">Destination</label>
-          <input type="text" id="destination" name="destination" required>
+          <label for="category">Category</label>
+          <input type="text" id="category" name="category" required>
         </div>
 
         <div class="form-group">
-          <label for="shipmentDate">Shipment Date</label>
-          <input type="date" id="shipmentDate" name="shipmentDate" required>
+          <label for="allocatedAmount">Allocated Amount</label>
+          <input type="number" id="allocatedAmount" name="allocatedAmount" required>
         </div>
 
         <div class="form-group">
-          <label for="productDetails">Product Details</label>
-          <textarea id="productDetails" name="productDetails" required></textarea>
+          <label for="budgetDate">Budget Date</label>
+          <input type="date" id="budgetDate" name="budgetDate" required>
         </div>
 
         <div class="form-group">
-          <button type="submit">Add Shipment</button>
+          <label for="description">Description</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Add Budget</button>
         </div>
 
         <p class="error-message" id="formErrorMessage"></p>
@@ -87,22 +92,23 @@
   </div>
 
   <script>
-    document.getElementById('addShipmentForm').addEventListener('submit', function(event) {
+    document.getElementById('addBudgetForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      const shipmentId = document.getElementById('shipmentId').value;
-      const destination = document.getElementById('destination').value;
-      const shipmentDate = document.getElementById('shipmentDate').value;
-      const productDetails = document.getElementById('productDetails').value;
+      const budgetId = document.getElementById('budgetId').value;
+      const category = document.getElementById('category').value;
+      const allocatedAmount = document.getElementById('allocatedAmount').value;
+      const budgetDate = document.getElementById('budgetDate').value;
+      const description = document.getElementById('description').value;
       const errorMessage = document.getElementById('formErrorMessage');
 
       // Validate the form fields
-      if (shipmentId && destination && shipmentDate && productDetails) {
+      if (budgetId && category && allocatedAmount && budgetDate && description) {
         // Simulate form submission (you can replace this with actual form submission logic)
-        alert('Shipment added successfully!');
+        alert('Budget added successfully!');
         
         // Clear the form
-        document.getElementById('addShipmentForm').reset();
+        document.getElementById('addBudgetForm').reset();
       } else {
         errorMessage.textContent = 'All fields are required.';
       }

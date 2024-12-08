@@ -29,55 +29,6 @@ p {
     color: #7f8c8d;
 }
 
-/* Dashboard Cards */
-.dashboard-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.card {
-    width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-icon {
-    font-size: 40px;
-    color: #3498db;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.card p {
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #2c3e50;
-}
-
-.card small {
-    color: #95a5a6;
-    font-size: 14px;
-}
-
-.card:hover {
-    background-color: #f1f1f1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover .card-icon {
-    color: #2980b9;
-}
-
 /* Table Styles */
 table {
     width: 100%;
@@ -90,7 +41,7 @@ table {
 }
 
 thead {
-    background-color: #3498db;
+    background-color: #85c1e9; /* Light Blue for Suppliers */
     color: white;
 }
 
@@ -101,35 +52,35 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f0f7fc;
 }
 
 tbody tr:hover {
-    background-color: #e1f5fe;
+    background-color: #e6f3fa;
 }
 
 td {
     color: #2c3e50;
 }
 
-/* Add New Budget Button */
+/* Add New Supplier Button */
 .table-header {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-#addBudgetBtn {
+#addSupplierBtn {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #85c1e9;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#addBudgetBtn:hover {
-    background-color: #2980b9;
+#addSupplierBtn:hover {
+    background-color: #5dade2;
 }
 
 /* Pagination Controls */
@@ -142,7 +93,7 @@ td {
 
 #prevPage, #nextPage {
     padding: 10px;
-    background-color: #3498db;
+    background-color: #85c1e9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -150,7 +101,7 @@ td {
 }
 
 #prevPage:hover, #nextPage:hover {
-    background-color: #2980b9;
+    background-color: #5dade2;
 }
 
 #currentPage {
@@ -158,9 +109,9 @@ td {
     color: #2c3e50;
 }
 
-/* Add some spacing and styling to the action buttons */
-#budgetTable .editBtn, 
-#budgetTable .deleteBtn {
+/* Action Buttons */
+#supplierTable .editBtn, 
+#supplierTable .deleteBtn {
     background: none;
     border: none;
     color: #007bff;
@@ -170,20 +121,20 @@ td {
     margin-right: 5px;
 }
 
-#budgetTable .editBtn:hover, 
-#budgetTable .deleteBtn:hover {
+#supplierTable .editBtn:hover, 
+#supplierTable .deleteBtn:hover {
     text-decoration: underline;
 }
 
-#budgetTable .deleteBtn {
+#supplierTable .deleteBtn {
     color: #dc3545;
 }
 
-#budgetTable .deleteBtn:hover {
+#supplierTable .deleteBtn:hover {
     color: #c82333;
 }
 
-/* Modal for Adding Budget */
+/* Modal for Adding Supplier */
 .modal {
     display: none;
     position: fixed;
@@ -205,8 +156,8 @@ td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Budget Form */
-.add-budget-form h2 {
+/* Supplier Form */
+.add-supplier-form h2 {
     font-size: 24px;
     color: #2c3e50;
     margin-bottom: 20px;
@@ -236,7 +187,7 @@ td {
 
 .form-group button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #85c1e9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -246,10 +197,10 @@ td {
 }
 
 .form-group button:hover {
-    background-color: #2980b9;
+    background-color: #5dade2;
 }
 
-/* Close button for modal */
+/* Close Button for Modal */
 .close {
     color: #aaa;
     font-size: 28px;
@@ -274,7 +225,7 @@ td {
         padding: 15px;
     }
 
-    .add-budget-form h2 {
+    .add-supplier-form h2 {
         font-size: 20px;
     }
 }
@@ -282,8 +233,28 @@ td {
 /* Logo Styling */
 .logo img {
     height: 60px;
-    max-width: 100%; /* Ensures the logo maintains its aspect ratio */
-    object-fit: contain; /* Makes sure the logo scales properly */
+    max-width: 100%;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
+}
+
+/* Two-column Layout Adjustments */
+.form-group:nth-child(odd) {
+    grid-column: 1; /* Left column */
+}
+
+.form-group:nth-child(even) {
+    grid-column: 2; /* Right column */
+}
+
+.form-group button {
+    background-color: #3498db;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
 }
