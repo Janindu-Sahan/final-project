@@ -8,7 +8,7 @@ body {
 
 .container {
     display: flex;
-    gap: 20px;
+    gap: 20px; 
 }
 
 /* Main Content */
@@ -69,6 +69,11 @@ p {
     font-size: 14px;
 }
 
+.logo img {
+    height: 50px;
+    margin-right: 20px; 
+}
+
 .card:hover {
     background-color: #f1f1f1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -112,14 +117,14 @@ td {
     color: #2c3e50;
 }
 
-/* Add New Budget Button */
+/* Add New Purchase Button */
 .table-header {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-#addBudgetBtn {
+#addPurchaseBtn {
     padding: 10px 20px;
     background-color: #3498db;
     color: white;
@@ -128,7 +133,7 @@ td {
     cursor: pointer;
 }
 
-#addBudgetBtn:hover {
+#addPurchaseBtn:hover {
     background-color: #2980b9;
 }
 
@@ -159,8 +164,8 @@ td {
 }
 
 /* Add some spacing and styling to the action buttons */
-#budgetTable .editBtn, 
-#budgetTable .deleteBtn {
+#purchaseTable .editBtn, 
+#purchaseTable .deleteBtn {
     background: none;
     border: none;
     color: #007bff;
@@ -170,20 +175,20 @@ td {
     margin-right: 5px;
 }
 
-#budgetTable .editBtn:hover, 
-#budgetTable .deleteBtn:hover {
+#purchaseTable .editBtn:hover, 
+#purchaseTable .deleteBtn:hover {
     text-decoration: underline;
 }
 
-#budgetTable .deleteBtn {
+#purchaseTable .deleteBtn {
     color: #dc3545;
 }
 
-#budgetTable .deleteBtn:hover {
+#purchaseTable .deleteBtn:hover {
     color: #c82333;
 }
 
-/* Modal for Adding Budget */
+/* Modal for Adding Purchase */
 .modal {
     display: none;
     position: fixed;
@@ -205,8 +210,8 @@ td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Budget Form */
-.add-budget-form h2 {
+/* Purchase Form */
+.add-purchase-form h2 {
     font-size: 24px;
     color: #2c3e50;
     margin-bottom: 20px;
@@ -274,16 +279,7 @@ td {
         padding: 15px;
     }
 
-    .add-budget-form h2 {
+    .add-purchase-form h2 {
         font-size: 20px;
     }
-}
-
-/* Logo Styling */
-.logo img {
-    height: 60px;
-    max-width: 100%; /* Ensures the logo maintains its aspect ratio */
-    object-fit: contain; /* Makes sure the logo scales properly */
-    display: block;
-    margin: 0 auto;
 }
